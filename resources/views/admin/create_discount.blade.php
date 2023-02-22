@@ -43,7 +43,7 @@
 
 
                         <div class="card-footer">
-                            <button class="btn btn-primary" type="button">Vissza</button>
+                            <a class="btn btn-primary" href="/discount_settings">Vissza</a>
 
                             <div class="d-grid gap-2 col-6 mx-auto">
                                 <button class="btn btn-success" type="submit">Létrehozás</button>
@@ -57,6 +57,17 @@
     <script>
         $(document).ready(function() {
             $('#summernote').summernote();
+        });
+        $(function() {
+            $("#regisztralt").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.13.1/i18n/hu.json',
+                },
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         });
     </script>
 @endsection
